@@ -1,0 +1,631 @@
+{
+ "kind": "youtube#commentThreadListResponse",
+ "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/frl9RvGRaGw9eavh2krqLd4Yy6c\"",
+ "nextPageToken": "Cg0Qgq3RvrLbzgIgACgBEhQIABDIuYz2hdLNAhj4kraY3Z3IAhgCIBQohri25MfJzripAQ==",
+ "pageInfo": {
+  "totalResults": 20,
+  "resultsPerPage": 20
+ },
+ "items": [
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/9YxsKOaz4paRbWdEWDtdb-pZcp0\"",
+   "id": "z13giha54qvfx5vgt04cdppaskqbf1uz3z40k",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/kjap-tA7sskBgOkE-HjwNW645jE\"",
+     "id": "z13giha54qvfx5vgt04cdppaskqbf1uz3z40k",
+     "snippet": {
+      "authorDisplayName": "Duc Nguyen Trong",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-VYfBcdMYcPs/AAAAAAAAAAI/AAAAAAAAB-o/9SAjIorwjec/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCZB1rBaYGt_ERSDeFH9eG_g",
+      "authorChannelId": {
+       "value": "UCZB1rBaYGt_ERSDeFH9eG_g"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Some text goes here!\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-07-01T10:22:56.000Z",
+      "updatedAt": "2016-07-01T10:22:56.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/XN614tE8lgYlNURRBs_Sdihq1ss\"",
+   "id": "z13fsxe5rwyfubok522sc5somufxe1g3i",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/U9Y_ag8zbfpLsbHLa62zMUel75c\"",
+     "id": "z13fsxe5rwyfubok522sc5somufxe1g3i",
+     "snippet": {
+      "authorDisplayName": "AGN News",
+      "authorProfileImageUrl": "https://lh5.googleusercontent.com/-dULHddzcPFE/AAAAAAAAAAI/AAAAAAAAACM/Afw4STKgBfs/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCMPMBfQoMGYk5jHdhJqr3DQ",
+      "authorChannelId": {
+       "value": "UCMPMBfQoMGYk5jHdhJqr3DQ"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Wow google is such an awesome company.\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-06-06T19:29:45.000Z",
+      "updatedAt": "2016-06-06T19:29:45.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/MP_1iSGdCMvEe7IGKgVxqH_Cmvo\"",
+   "id": "z12edtn53mn1ydau523qwxq5npuszth24",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/DNghKddHxbgXtGMcaj1332st5ls\"",
+     "id": "z12edtn53mn1ydau523qwxq5npuszth24",
+     "snippet": {
+      "authorDisplayName": "Mind Matters",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCnGy16mK-gZin3Jh3jv-rng",
+      "authorChannelId": {
+       "value": "UCnGy16mK-gZin3Jh3jv-rng"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Land of The Free and Home of the Brave! Go USA! \u003cbr /\u003eKeeping the segregation Alive Handsome? \u003cbr /\u003e\u003cbr /\u003eBack Home......India???\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-05-13T18:43:31.000Z",
+      "updatedAt": "2016-05-13T18:43:31.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/TN8RWJU5oXjd6puDd3RyREWj81c\"",
+   "id": "z12hf1fjqubvdhwd223qznvoqwuyst5qu04",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/dFQ5l4ceAtwOrU_8-6cu7n8ICqk\"",
+     "id": "z12hf1fjqubvdhwd223qznvoqwuyst5qu04",
+     "snippet": {
+      "authorDisplayName": "Nidhish ABRAHAM",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-tcRE5xfamMQ/AAAAAAAAAAI/AAAAAAAAMbw/_ElsicBzuJA/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCWOoAH6M8hP8kXmydd6TBrA",
+      "authorChannelId": {
+       "value": "UCWOoAH6M8hP8kXmydd6TBrA"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "M-Pesa in Kenya works even without smart phones via USSD and SMS.\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-04-26T20:33:08.000Z",
+      "updatedAt": "2016-04-26T20:33:08.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 2,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/BV_pg6pOkJFZAn5xZlZ9a1ykemU\"",
+   "id": "z12ljvsycxn3txb0u22ywbkj3vewd1c1u",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/nhY3LRHuLOV4NyY1wiTpW7t6nMo\"",
+     "id": "z12ljvsycxn3txb0u22ywbkj3vewd1c1u",
+     "snippet": {
+      "authorDisplayName": "Yousouf Jhugroo",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-fTMwtspKOVU/AAAAAAAAAAI/AAAAAAAAAHw/2PzvnBkyAG8/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCuZb7vcbDq6h9jWxmZvXVmg",
+      "authorChannelId": {
+       "value": "UCuZb7vcbDq6h9jWxmZvXVmg"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Advertising giant\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-04-25T16:55:26.000Z",
+      "updatedAt": "2016-04-25T16:55:26.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/lyJlqG23rMDO0P9z_W8l4Z2NFeI\"",
+   "id": "z12evr0yupfyib3uh23eux0xklqixlgnw",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/JkQ4d-_Qu9DmOtHpOfPefe1U90I\"",
+     "id": "z12evr0yupfyib3uh23eux0xklqixlgnw",
+     "snippet": {
+      "authorDisplayName": "Sabaidee HD",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-_W-W6W7U1bI/AAAAAAAAAAI/AAAAAAAAAEY/vpE_cOy9_34/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCf83gRPIm3FDhdW5nntluwg",
+      "authorChannelId": {
+       "value": "UCf83gRPIm3FDhdW5nntluwg"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "It is annoying seeing him walking back and forth\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-04-01T06:11:49.000Z",
+      "updatedAt": "2016-04-01T06:11:49.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/AtE9W6k6zEtCcY6rZZOP4vXui8I\"",
+   "id": "z12cg5ebjvecdhqae04cflmbypbpdjggxjs",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/C2qWUyyeHdzB7_hf31btqosWAtE\"",
+     "id": "z12cg5ebjvecdhqae04cflmbypbpdjggxjs",
+     "snippet": {
+      "authorDisplayName": "Panayot Shilkov",
+      "authorProfileImageUrl": "https://lh6.googleusercontent.com/-CxOQSx4rBY4/AAAAAAAAAAI/AAAAAAAAABQ/64D7sTeGEUw/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCEA06wnqBm7MKagAiwBEC2g",
+      "authorChannelId": {
+       "value": "UCEA06wnqBm7MKagAiwBEC2g"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "what  kind of software is used for that presentation?\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-03-25T09:33:54.000Z",
+      "updatedAt": "2016-03-25T09:33:54.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/9UF5DPReDB0nf054Sr-Q6JCHaO8\"",
+   "id": "z12wd5gj3vjtzpz3323oc5izcxj0hztko",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/ZKh3TpXwd3U3KB3-Fc7NXjydrSw\"",
+     "id": "z12wd5gj3vjtzpz3323oc5izcxj0hztko",
+     "snippet": {
+      "authorDisplayName": "Mo Jo",
+      "authorProfileImageUrl": "https://lh4.googleusercontent.com/-KZEvk7yP4hs/AAAAAAAAAAI/AAAAAAAAABE/MdkSv4277CE/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCRKvTGys0PQI0K3zPWOmkzg",
+      "authorChannelId": {
+       "value": "UCRKvTGys0PQI0K3zPWOmkzg"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "\u003ca href=\"http://www.youtube.com/watch?v=wtLJPvx7-ys&amp;t=18m51s\"\u003e18:51\u003c/a\u003e... I burst out laughing.\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-03-16T05:15:00.000Z",
+      "updatedAt": "2016-03-16T05:15:00.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 1,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/DUa-hLS18oxEKuaspMGOat4WIyY\"",
+   "id": "z13zvnag2m34czass22aulwzkuqudzwjd04",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/h-4EwpPXyaessFNiw8_TU1kkqDs\"",
+     "id": "z13zvnag2m34czass22aulwzkuqudzwjd04",
+     "snippet": {
+      "authorDisplayName": "Joylip Video",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCoMhA2ZegQSgqmAz54THzig",
+      "authorChannelId": {
+       "value": "UCoMhA2ZegQSgqmAz54THzig"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "sa\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-02-29T22:01:39.000Z",
+      "updatedAt": "2016-02-29T22:01:39.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/YuiAHY9pUJQlv7-Wmr3ZDxN6vuw\"",
+   "id": "z132ur055uyrc3dj404celczdy2ttlkaemw0k",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/nd93JEMQaCKrddPZq_xAEa4IyYw\"",
+     "id": "z132ur055uyrc3dj404celczdy2ttlkaemw0k",
+     "snippet": {
+      "authorDisplayName": "Nick Colonna",
+      "authorProfileImageUrl": "https://lh4.googleusercontent.com/-rwLic4hXRx8/AAAAAAAAAAI/AAAAAAAAAF8/-KF19vcxHOw/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCnB5fxsrmtsXgAAB0K1kvYA",
+      "authorChannelId": {
+       "value": "UCnB5fxsrmtsXgAAB0K1kvYA"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "OoO PORTER ROBINSON RAC REMIX IN BEGINNING THO &lt;&lt;&lt;333\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 1,
+      "publishedAt": "2016-02-12T07:30:25.000Z",
+      "updatedAt": "2016-02-12T07:30:25.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 1,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/d8F5byYLd4wFTM9FPspIPXXm07Q\"",
+   "id": "z13atx55tq34hrrum23fhb3wbtv5vfvus",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/zwXeOv8WDfeN80015cmgmboFH0k\"",
+     "id": "z13atx55tq34hrrum23fhb3wbtv5vfvus",
+     "snippet": {
+      "authorDisplayName": "Bala krishnan",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCx4iipR96wh1wF5xc7JbZGQ",
+      "authorChannelId": {
+       "value": "UCx4iipR96wh1wF5xc7JbZGQ"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Some text goes here\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-01-21T14:55:13.000Z",
+      "updatedAt": "2016-01-21T14:55:13.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/CGQjjjM7N-UoNgUv7lYN42aMO3E\"",
+   "id": "z12bxf5watfoyhsez23fhb3wbtv5vfvus",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/yK3Hepa8Qc5LyLsP_3K5YApdc44\"",
+     "id": "z12bxf5watfoyhsez23fhb3wbtv5vfvus",
+     "snippet": {
+      "authorDisplayName": "Bala krishnan",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCx4iipR96wh1wF5xc7JbZGQ",
+      "authorChannelId": {
+       "value": "UCx4iipR96wh1wF5xc7JbZGQ"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Some text goes here\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2016-01-21T14:37:26.000Z",
+      "updatedAt": "2016-01-21T14:37:26.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/3P35KdbMMMJrYQMjo9c87bVPJw8\"",
+   "id": "z12felnpuyndzxtsi22jsrkqxsiwz530j",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/LUF2B9LIMmoKL5cLJiEYyWZg9Fw\"",
+     "id": "z12felnpuyndzxtsi22jsrkqxsiwz530j",
+     "snippet": {
+      "authorDisplayName": "Igords tube",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCCfPYTP3tBe4i23Cfl4SPlA",
+      "authorChannelId": {
+       "value": "UCCfPYTP3tBe4i23Cfl4SPlA"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "it true that smart phone will give us idea and creative and also education.\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2015-12-08T17:33:51.000Z",
+      "updatedAt": "2015-12-08T17:33:51.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/5o-p97eriudleZWobWtKTGSLgQs\"",
+   "id": "z132i5hjttiacfr4w04cdhm5aybpvzt4km00k",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/RjGkG0rBd03lufFH_-TG0yqaCRw\"",
+     "id": "z132i5hjttiacfr4w04cdhm5aybpvzt4km00k",
+     "snippet": {
+      "authorDisplayName": "avad binabood",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-rjJ1iwDK55Q/AAAAAAAAAAI/AAAAAAAAAE4/lp5Q4Jhohrs/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCs8FLT4k0v7OFksoDedCZHQ",
+      "authorChannelId": {
+       "value": "UCs8FLT4k0v7OFksoDedCZHQ"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "indian ra best\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2015-11-08T05:50:18.000Z",
+      "updatedAt": "2015-11-08T05:50:18.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 1,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/tC4zaTRu39LJ7tIWBKzIc4Jm2Nw\"",
+   "id": "z13pcx4bzzf5yv0iq04cehyh0vyfdrvqzj0",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/phl7fhfQFHmP36wavDhkjNsx6N4\"",
+     "id": "z13pcx4bzzf5yv0iq04cehyh0vyfdrvqzj0",
+     "snippet": {
+      "authorDisplayName": "Ben",
+      "authorProfileImageUrl": "https://lh5.googleusercontent.com/-U9796wcbnmQ/AAAAAAAAAAI/AAAAAAAAAM4/lTp6pqEp-Xs/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCjnQB1mK43cqhFo3m8lFXdQ",
+      "authorChannelId": {
+       "value": "UCjnQB1mK43cqhFo3m8lFXdQ"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Spot the guys wearing google glass\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2015-10-30T07:37:04.000Z",
+      "updatedAt": "2015-10-30T07:37:04.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/4hH9Bf47NhcxKj26doShgD20Sx8\"",
+   "id": "z12lw1b5tpnjebrsj22dxpyqfvvndvqch",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/DBv1eFEZJxzEbmf-in4MGVnlCrQ\"",
+     "id": "z12lw1b5tpnjebrsj22dxpyqfvvndvqch",
+     "snippet": {
+      "authorDisplayName": "Sam Mut",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCbHYgQ0zcY8yvz_vC8gkU-w",
+      "authorChannelId": {
+       "value": "UCbHYgQ0zcY8yvz_vC8gkU-w"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Subtitle pottu kevalapadutherengala .....lol\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2015-10-14T01:43:23.000Z",
+      "updatedAt": "2015-10-14T01:43:23.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/SwB5vdVGjhVcWdEl2EsYUabkszg\"",
+   "id": "z12bg3sbxkerufhy204cj3yxxxz4yl5apjw",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/7v_qs9cRYWJg1BYHPGoIfMZQO6o\"",
+     "id": "z12bg3sbxkerufhy204cj3yxxxz4yl5apjw",
+     "snippet": {
+      "authorDisplayName": "D3FKON Music™",
+      "authorProfileImageUrl": "https://lh5.googleusercontent.com/-l7obgCLDEDU/AAAAAAAAAAI/AAAAAAAAAgc/yAOtRy4oHzc/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UClai2vK8HR9DNVjGBE7ojsg",
+      "authorChannelId": {
+       "value": "UClai2vK8HR9DNVjGBE7ojsg"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Bull shit\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2015-10-12T15:56:14.000Z",
+      "updatedAt": "2015-10-12T15:56:14.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/B3dYPDMFu13PUgIeC55J1NaE1gE\"",
+   "id": "z12iw3iosuufurihp04cep1xuvf5ercbykc0k",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/RJoDcHRXI5iqrhdwl571rBidRa4\"",
+     "id": "z12iw3iosuufurihp04cep1xuvf5ercbykc0k",
+     "snippet": {
+      "authorDisplayName": "People Power",
+      "authorProfileImageUrl": "https://lh3.googleusercontent.com/-WzW6rC1GuwU/AAAAAAAAAAI/AAAAAAAAABE/4XzCfHxRGb8/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCIdM2gzDX65JQEf2Uz_QUsQ",
+      "authorChannelId": {
+       "value": "UCIdM2gzDX65JQEf2Uz_QUsQ"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "Why is Google Blocking Privacy Browsers\u003cbr /\u003eEpic Privacy Browser  vs GOOGLE\u003cbr /\u003eEpic Privacy Browser is the best (Privacy Browser) out there.\u003cbr /\u003eI dont like being tracked.\u003cbr /\u003eWhat I do on line is my business. If I wanted my info to be past around the GLOB I can do that myself.\u003cbr /\u003eI want to be PRIVET, This is why I don&#39;t use Face Book.\u003cbr /\u003eThe thing with YouTube is when your on here for 30 minuts you will get 30 to 40 Trackes/COOKIES loaded onto your PC/LapTop/phone. With EPIC you can see them being LOCKED. Use epic it will keep you Privet on every page you Visit\u003cbr /\u003eEpice vs Google. The thing is Google make BIG money from us all, Selling the internet to us/phoneLine &amp; Adds. So why it it so expensive. Google is now making $3 billion a month in advertising alone. \u003cbr /\u003eInternet Users European Union, 31,21,515,71 - China, 3,840,000,00 - United States, 266,441,302, 3, 84 - India, 352,340,854, 2, 24 = 622937454179 people on a databass. We as people are powerful. We must stop being use by &quot;giant companies&quot;\u003cbr /\u003eLong Live Epic Privacy Browser. Support Privet Browsers\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 1,
+      "publishedAt": "2015-10-07T20:49:19.000Z",
+      "updatedAt": "2015-10-07T20:49:19.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/T-WaXJR3-k23-OQUbUPa32HiB04\"",
+   "id": "z12rdh3xbtmiidtg104cczkbkqebgteo4m00k",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/fiPPRGswcTK2taQ9JEuvvfacYqM\"",
+     "id": "z12rdh3xbtmiidtg104cczkbkqebgteo4m00k",
+     "snippet": {
+      "authorDisplayName": "Elan Thamizhan",
+      "authorProfileImageUrl": "https://lh4.googleusercontent.com/-EV5AviS4sFg/AAAAAAAAAAI/AAAAAAAAAFg/bqaNKk42RH4/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCSrTrgrEpSoHvrSehhAKfwg",
+      "authorChannelId": {
+       "value": "UCSrTrgrEpSoHvrSehhAKfwg"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "tamilanda\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 0,
+      "publishedAt": "2015-09-30T14:05:12.000Z",
+      "updatedAt": "2015-09-30T14:05:12.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  },
+  {
+   "kind": "youtube#commentThread",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/BD16U1Eh2pDbaqD843GoegVOEvE\"",
+   "id": "z12zsxex4sjkf3jjt04chvpj1nqquhaxoow0k",
+   "snippet": {
+    "videoId": "wtLJPvx7-ys",
+    "topLevelComment": {
+     "kind": "youtube#comment",
+     "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/g0QkvKqUUrDoEoGMYt3Bry1ljS8\"",
+     "id": "z12zsxex4sjkf3jjt04chvpj1nqquhaxoow0k",
+     "snippet": {
+      "authorDisplayName": "Moazam Ollie",
+      "authorProfileImageUrl": "https://lh5.googleusercontent.com/-lBaloKA8dvM/AAAAAAAAAAI/AAAAAAAAAN0/Wc1oq79BZMs/photo.jpg?sz=50",
+      "authorChannelUrl": "http://www.youtube.com/channel/UCspKfTtkC69PM2LQWxqU6EQ",
+      "authorChannelId": {
+       "value": "UCspKfTtkC69PM2LQWxqU6EQ"
+      },
+      "videoId": "wtLJPvx7-ys",
+      "textDisplay": "WHERE TF THE TIMESTAMPS AT\ufeff",
+      "canRate": false,
+      "viewerRating": "none",
+      "likeCount": 6,
+      "publishedAt": "2015-09-30T02:38:23.000Z",
+      "updatedAt": "2015-09-30T02:38:23.000Z"
+     }
+    },
+    "canReply": false,
+    "totalReplyCount": 0,
+    "isPublic": true
+   }
+  }
+ ]
+}
