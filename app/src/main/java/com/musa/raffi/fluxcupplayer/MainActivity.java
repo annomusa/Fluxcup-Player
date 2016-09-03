@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String ROOT_URL = "https://www.googleapis.com/youtube/v3/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
