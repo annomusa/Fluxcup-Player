@@ -19,11 +19,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import rx.Observable;
+import rx.Subscriber;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by Asus on 8/24/2016.
@@ -32,8 +35,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DetailVideoFragment extends Fragment {
     private ArrayList<String> mVideoList;
     private String mCurrentVideo;
-    private String mUrlTitle;
-    private String mUrlComment;
+
+    private Subscription subscription;
 
     public static final String ROOT_URL = "https://www.googleapis.com/youtube/v3/";
 
@@ -46,9 +49,6 @@ public class DetailVideoFragment extends Fragment {
         mVideoList = VideoList.getInstance().getVideo();
         int position = getArguments().getInt("Position");
         mCurrentVideo = mVideoList.get(position);
-
-        mUrlTitle = "https://www.googleapis.com/youtube/v3/videos?key=" + Resource.KEY  + "&part=snippet&id=" + mCurrentVideo;
-        mUrlComment = "https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=" + mCurrentVideo +"&key=" + Resource.KEY;
     }
 
     public static DetailVideoFragment newInstance(int position){
@@ -67,83 +67,88 @@ public class DetailVideoFragment extends Fragment {
         final TextView txtDescription = (TextView) view.findViewById(R.id.txtDetail);
         final ListView list_comment = (ListView) view.findViewById(R.id.list_comment);
 
+        RxJavaCallAdapterFactory rxAdapter = RxJavaCallAdapterFactory.createWithScheduler(Schedulers.io());
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ROOT_URL)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(rxAdapter)
                 .build();
+        RestApi apiService = retrofit.create(RestApi.class);
 
-        // get detail video
-        RestApi service = retrofit.create(RestApi.class);
+        Observable<DetailVideo> callDetail = apiService.getDetailVideo(Resource.KEY, "snippet", mCurrentVideo);
+        subscription = callDetail.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<DetailVideo>() {
+                    @Override
+                    public void onCompleted() {
 
-        Call<DetailVideo> call = service.getDetailVideo(mUrlTitle);
-        call.enqueue(new Callback<DetailVideo>() {
-            @Override
-            public void onResponse(Call<DetailVideo> call, Response<DetailVideo> response) {
-                String title = response.body().getItems().get(0).getSnippet().getTitle();
-                String description = response.body().getItems().get(0).getSnippet().getTitle();
-
-                txtTitle.setText(title);
-                txtDescription.setText(description);
-            }
-
-            @Override
-            public void onFailure(Call<DetailVideo> call, Throwable t) {
-
-            }
-        });
-
-        // get comment list
-        final ArrayList<HashMap<String, String>> commentList = new ArrayList<>();
-        RestApi service2 = retrofit.create(RestApi.class);
-        Call<CommentList> call2 = service2.getCommentVideo(mUrlComment);
-
-        call2.enqueue(new Callback<CommentList>() {
-            @Override
-            public void onResponse(Call<CommentList> call, Response<CommentList> response) {
-                List<Item> items;
-                items = response.body().getItems();
-                if(items.size() > 0){
-                    for (int i=0; i<items.size(); i++){
-                        String author = items.get(i).getSnippet()
-                                .getTopLevelComment()
-                                .getSnippet()
-                                .getAuthorDisplayName();
-                        String comment = items.get(i).getSnippet()
-                                .getTopLevelComment()
-                                .getSnippet()
-                                .getTextDisplay();
-
-                        HashMap<String, String> commentDetail = new HashMap<>();
-                        commentDetail.put(TAG_AUTHOR, author);
-                        commentDetail.put(TAG_COMMENT, comment);
-                        commentList.add(commentDetail);
-
-                        Log.d("req comment", "onResponse: " + author + comment);
                     }
-                }
 
-                SimpleAdapter adapter = new SimpleAdapter(getActivity(),
-                        commentList,
-                        R.layout.list_comment,
-                        new String[]{
-                                TAG_AUTHOR,
-                                TAG_COMMENT
-                        },
-                        new int[]{
-                                R.id.txtAuthor,
-                                R.id.txtComment
-                        });
-                list_comment.setAdapter(adapter);
+                    @Override
+                    public void onError(Throwable e) {
 
-            }
+                    }
 
-            @Override
-            public void onFailure(Call<CommentList> call, Throwable t) {
+                    @Override
+                    public void onNext(DetailVideo detailVideo) {
+                        String title = detailVideo.getItems().get(0).getSnippet().getTitle();
+                        String description = detailVideo.getItems().get(0).getSnippet().getDescription();
+                        txtTitle.setText(title);
+                        txtDescription.setText(description);
+                    }
+                });
 
-            }
-        });
+        Observable<CommentList> callComment = apiService.getCommentVideo("snippet", mCurrentVideo, Resource.KEY);
+        subscription = callComment.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<CommentList>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(CommentList commentList) {
+                        final ArrayList<HashMap<String, String>> commentVideo = new ArrayList<>();
+                        List<Item> items;
+                        items = commentList.getItems();
+                        if(items.size() > 0){
+                            for (int i=0; i<items.size(); i++){
+                                String author = items.get(i).getSnippet().getTopLevelComment()
+                                        .getSnippet().getAuthorDisplayName();
+                                String comment = items.get(i).getSnippet().getTopLevelComment()
+                                        .getSnippet().getTextDisplay();
+
+                                HashMap<String, String> commentDetail = new HashMap<>();
+                                commentDetail.put(TAG_AUTHOR, author);
+                                commentDetail.put(TAG_COMMENT, comment);
+                                commentVideo.add(commentDetail);
+
+                                Log.d("req comment", "onResponse: " + author + comment);
+                            }
+                        }
+
+                        SimpleAdapter adapter = new SimpleAdapter(getActivity(),
+                                commentVideo,
+                                R.layout.list_comment,
+                                new String[]{ TAG_AUTHOR, TAG_COMMENT },
+                                new int[]{ R.id.txtAuthor, R.id.txtComment }
+                        );
+                        list_comment.setAdapter(adapter);
+
+                    }
+                });
 
         return view;
+    }
+
+    @Override
+    public void onDestroy(){
+        subscription.unsubscribe();
+        super.onDestroy();
     }
 
 }
