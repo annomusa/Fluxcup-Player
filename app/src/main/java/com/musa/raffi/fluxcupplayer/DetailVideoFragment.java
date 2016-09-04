@@ -10,10 +10,11 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.musa.raffi.fluxcupplayer.models.Resource;
 import com.musa.raffi.fluxcupplayer.models.comment.CommentList;
 import com.musa.raffi.fluxcupplayer.models.comment.Item;
 import com.musa.raffi.fluxcupplayer.models.detail.DetailVideo;
-import com.musa.raffi.fluxcupplayer.networking.RestApi;
+import com.musa.raffi.fluxcupplayer.service.RestApi;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,12 +34,10 @@ import rx.schedulers.Schedulers;
  */
 
 public class DetailVideoFragment extends Fragment {
-    private ArrayList<String> mVideoList;
+    private List<String> mVideoList;
     private String mCurrentVideo;
 
     private Subscription subscription;
-
-    public static final String ROOT_URL = "https://www.googleapis.com/youtube/v3/";
 
     private static final String TAG_AUTHOR = "authorDisplayName";
     private static final String TAG_COMMENT = "textDisplay";
@@ -46,7 +45,7 @@ public class DetailVideoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        mVideoList = VideoList.getInstance().getVideo();
+        mVideoList = SingletonVideoList.getInstance().getVideo();
         int position = getArguments().getInt("Position");
         mCurrentVideo = mVideoList.get(position);
     }
@@ -69,7 +68,7 @@ public class DetailVideoFragment extends Fragment {
 
         RxJavaCallAdapterFactory rxAdapter = RxJavaCallAdapterFactory.createWithScheduler(Schedulers.io());
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(ROOT_URL)
+                .baseUrl(Resource.ROOT_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(rxAdapter)
                 .build();

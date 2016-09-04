@@ -1,4 +1,4 @@
-package com.musa.raffi.fluxcupplayer;
+package com.musa.raffi.fluxcupplayer.models;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,20 +13,27 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeStandalonePlayer;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
+import com.musa.raffi.fluxcupplayer.DetailActivity;
+import com.musa.raffi.fluxcupplayer.R;
+import com.musa.raffi.fluxcupplayer.SingletonVideoList;
+import com.musa.raffi.fluxcupplayer.models.video.Item;
+import com.musa.raffi.fluxcupplayer.models.video.VideoList;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * Created by Asus on 8/23/2016.
  */
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoInfoHolder> {
+public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.VideoInfoHolder> {
     Context ctx;
-    private ArrayList<String> mVideoList =VideoList.getInstance().getVideo();
+//    private ArrayList<String> mVideoList = com.musa.raffi.fluxcupplayer.SingletonVideoList.getInstance().getVideo();
+    private List<String> mVideoList;
 
-    public RecyclerAdapter(Context context) {
+    public VideoListAdapter(Context context) {
         this.ctx = context;
+        mVideoList = SingletonVideoList.getInstance().getVideo();
     }
 
     @Override
@@ -69,6 +76,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.VideoI
     @Override
     public int getItemCount() {
         return mVideoList.size();
+    }
+
+    public void addVideosList(VideoList videoList) {
+        List<Item> items;
+        items = videoList.getItems();
+        if (items.size() > 0){
+            for (int i=0; i<items.size(); i++){
+                String videoId = items.get(i).getId().getVideoId();
+                mVideoList.add(videoId);
+            }
+        }
+        notifyDataSetChanged();
     }
 
     public class VideoInfoHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {

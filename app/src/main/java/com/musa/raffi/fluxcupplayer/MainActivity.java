@@ -1,18 +1,46 @@
 package com.musa.raffi.fluxcupplayer;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    public static final String ROOT_URL = "https://www.googleapis.com/youtube/v3/";
+import com.musa.raffi.fluxcupplayer.base.VideoPresenter;
+import com.musa.raffi.fluxcupplayer.base.VideoViewInterface;
+import com.musa.raffi.fluxcupplayer.deps.Deps;
+import com.musa.raffi.fluxcupplayer.models.Resource;
+import com.musa.raffi.fluxcupplayer.models.VideoListAdapter;
+import com.musa.raffi.fluxcupplayer.models.video.VideoList;
+import com.musa.raffi.fluxcupplayer.service.RestApi;
+
+import javax.inject.Inject;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import rx.Observable;
+
+public class MainActivity extends AppCompatActivity implements VideoViewInterface {
+    @Inject
+    RestApi restApi;
+
+    private VideoPresenter mPresenter;
+
+    @Bind(R.id.list)
+    RecyclerView mRecyclerView;
+
+    private VideoListAdapter mAdapter;
+
+    private ProgressDialog mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +57,39 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        resolveDependency();
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list);
+        ButterKnife.bind(MainActivity.this);
 
-        if (null != recyclerView) {
-            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        if(mRecyclerView != null) configViews();
+        mPresenter = new VideoPresenter(MainActivity.this);
+        mPresenter.onCreate();
 
-            linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-            recyclerView.setLayoutManager(linearLayoutManager);
+//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list);
+//        if (null != recyclerView) {
+//            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//
+//            linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+//            recyclerView.setLayoutManager(linearLayoutManager);
+//
+//            VIdeoListAdapter adapter = new VIdeoListAdapter(MainActivity.this);
+//            recyclerView.setAdapter(adapter);
+//        }
+    }
 
-            RecyclerAdapter adapter = new RecyclerAdapter(MainActivity.this);
-            recyclerView.setAdapter(adapter);
-        }
+    private void resolveDependency() {
+        ((Deps) getApplication())
+                .getApiComponent()
+                .inject(MainActivity.this);
+    }
+
+    private void configViews() {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+
+        mAdapter = new VideoListAdapter(MainActivity.this);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     @Override
@@ -63,5 +112,44 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mPresenter.onResume();
+        mPresenter.fetchVideos();
+        mDialog = new ProgressDialog(MainActivity.this);
+        mDialog.setIndeterminate(true);
+        mDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        mDialog.setTitle("Downloading List");
+        mDialog.setMessage("Please wait...");
+        mDialog.show();
+    }
+
+    @Override
+    public void onCompleted() {
+        mDialog.dismiss();
+    }
+
+    @Override
+    public void onError(String message) {
+        mDialog.dismiss();
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onVideoList(VideoList videoList) {
+        mAdapter.addVideosList(videoList);
+    }
+
+    @Override
+    public Observable<VideoList> getVideos() {
+//        Log.d("much", "https://www.googleapis.com/youtube/v3/search?key=" + Resource.KEY + "&channelId=" + Resource.CHANNEL_ID + "&part=snippet,id&order=date&maxResults=20");
+        return restApi.getVideoId(Resource.KEY,
+                Resource.CHANNEL_ID,
+                "snippet,id",
+                "date",
+                "5");
     }
 }
