@@ -1,6 +1,7 @@
 package com.musa.raffi.fluxcupplayer.deps;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.musa.raffi.fluxcupplayer.models.Resource;
 import com.musa.raffi.fluxcupplayer.dependencies.ApiComponent;

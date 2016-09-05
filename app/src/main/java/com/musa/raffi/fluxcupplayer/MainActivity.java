@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements VideoViewInterfac
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
-        mAdapter = new VideoListAdapter(MainActivity.this);
+        mAdapter = new VideoListAdapter(getApplicationContext(), MainActivity.this);
         mRecyclerView.setAdapter(mAdapter);
     }
 

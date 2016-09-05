@@ -29,9 +29,11 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.Vide
     Context ctx;
 //    private ArrayList<String> mVideoList = com.musa.raffi.fluxcupplayer.models.SingletonVideoList.getInstance().getVideo();
     private List<String> mVideoList;
+    Context mainCtx;
 
-    public VideoListAdapter(Context context) {
+    public VideoListAdapter(Context context, Context mainContext) {
         this.ctx = context;
+        this.mainCtx = mainContext;
         mVideoList = SingletonVideoList.getInstance().getVideo();
     }
 
@@ -44,7 +46,8 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.Vide
     @Override
     public void onBindViewHolder(final VideoInfoHolder holder, final int position) {
 
-        final YouTubeThumbnailLoader.OnThumbnailLoadedListener onThumbnailLoadedListener = new YouTubeThumbnailLoader.OnThumbnailLoadedListener(){
+        final YouTubeThumbnailLoader.OnThumbnailLoadedListener
+                onThumbnailLoadedListener = new YouTubeThumbnailLoader.OnThumbnailLoadedListener(){
             @Override
             public void onThumbnailError(YouTubeThumbnailView youTubeThumbnailView, YouTubeThumbnailLoader.ErrorReason errorReason) {
 
@@ -57,16 +60,19 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.Vide
             }
         };
 
-        holder.youTubeThumbnailView.initialize(Resource.KEY, new YouTubeThumbnailView.OnInitializedListener() {
+        holder.youTubeThumbnailView.initialize(Resource.KEY,
+                new YouTubeThumbnailView.OnInitializedListener() {
             @Override
-            public void onInitializationSuccess(YouTubeThumbnailView youTubeThumbnailView, YouTubeThumbnailLoader youTubeThumbnailLoader) {
+            public void onInitializationSuccess(YouTubeThumbnailView youTubeThumbnailView,
+                                                YouTubeThumbnailLoader youTubeThumbnailLoader) {
 
                 youTubeThumbnailLoader.setVideo(mVideoList.get(position));
                 youTubeThumbnailLoader.setOnThumbnailLoadedListener(onThumbnailLoadedListener);
             }
 
             @Override
-            public void onInitializationFailure(YouTubeThumbnailView youTubeThumbnailView, YouTubeInitializationResult youTubeInitializationResult) {
+            public void onInitializationFailure(YouTubeThumbnailView youTubeThumbnailView,
+                                                YouTubeInitializationResult youTubeInitializationResult) {
 
             }
         });
@@ -107,13 +113,13 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.Vide
 
         @Override
         public void onClick(View v) {
-            Intent intent = YouTubeStandalonePlayer.createVideoIntent( (Activity) ctx,
+            Intent intent = YouTubeStandalonePlayer.createVideoIntent(  (Activity) mainCtx,
                     Resource.KEY,
                     mVideoList.get(getLayoutPosition()),
                     100,
                     false,
                     true);
-            ctx.startActivity(intent);
+            mainCtx.startActivity(intent);
 //            Intent intent = new Intent(v.getContext(), DetailActivity.class);
 //            intent.putExtra("Position", getLayoutPosition());
 //            ctx.startActivity(intent);
@@ -121,8 +127,9 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.Vide
 
         @Override
         public boolean onLongClick(View v){
-            Intent intent = new Intent(v.getContext(), DetailActivity.class);
+            Intent intent = new Intent( ctx, DetailActivity.class);
             intent.putExtra("Position", getLayoutPosition());
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             ctx.startActivity(intent);
 
             return false;
