@@ -13,9 +13,8 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeStandalonePlayer;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
-import com.musa.raffi.fluxcupplayer.DetailActivity;
+import com.musa.raffi.fluxcupplayer.detail.DetailActivity;
 import com.musa.raffi.fluxcupplayer.R;
-import com.musa.raffi.fluxcupplayer.SingletonVideoList;
 import com.musa.raffi.fluxcupplayer.models.video.Item;
 import com.musa.raffi.fluxcupplayer.models.video.VideoList;
 
@@ -28,7 +27,7 @@ import java.util.List;
 
 public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.VideoInfoHolder> {
     Context ctx;
-//    private ArrayList<String> mVideoList = com.musa.raffi.fluxcupplayer.SingletonVideoList.getInstance().getVideo();
+//    private ArrayList<String> mVideoList = com.musa.raffi.fluxcupplayer.models.SingletonVideoList.getInstance().getVideo();
     private List<String> mVideoList;
 
     public VideoListAdapter(Context context) {

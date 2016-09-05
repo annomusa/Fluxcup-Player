@@ -1,4 +1,4 @@
-package com.musa.raffi.fluxcupplayer;
+package com.musa.raffi.fluxcupplayer.models;
 
 import java.util.ArrayList;
 

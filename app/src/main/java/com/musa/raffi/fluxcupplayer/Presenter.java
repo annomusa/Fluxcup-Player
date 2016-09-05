@@ -1,4 +1,4 @@
-package com.musa.raffi.fluxcupplayer.base;
+package com.musa.raffi.fluxcupplayer;
 
 /**
  * Created by Asus on 9/4/2016.

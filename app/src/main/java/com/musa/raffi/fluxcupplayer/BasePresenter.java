@@ -1,4 +1,4 @@
-package com.musa.raffi.fluxcupplayer.base;
+package com.musa.raffi.fluxcupplayer;
 
 import rx.Observable;
 import rx.Observer;

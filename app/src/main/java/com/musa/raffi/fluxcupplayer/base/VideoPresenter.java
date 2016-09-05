@@ -1,7 +1,6 @@
 package com.musa.raffi.fluxcupplayer.base;
 
-import android.util.Log;
-
+import com.musa.raffi.fluxcupplayer.BasePresenter;
 import com.musa.raffi.fluxcupplayer.models.video.VideoList;
 
 import rx.Observer;
